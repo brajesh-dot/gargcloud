@@ -7,3 +7,4 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page247/ki
 WORKDIR /var/www/html
 RUN unzip kindle.zip
 EXPOSE 80
+COPY /sourcecode/docker.yml /etc
