@@ -1,3 +1,4 @@
+def gv
 pipeline {
     agent {
         label 'ram'
@@ -7,10 +8,18 @@ pipeline {
         booleanParam(name: 'excuteTests', defaultValue: true,description: '')
     }
     stages {
+         stage('init'){
+            steps{
+                script {
+                    gv = load "script.groovy"
+                }
+            }
+        }
         stage('built') {
             steps {
-                echo 'build the application'
-                echo "build with mentioned version "
+                script {
+                 gv.buldApp()   
+                }
             }  
         }
         stage('test') {
@@ -20,13 +29,12 @@ pipeline {
                  }
              }
             steps {
-                echo 'test the application'
+                gv.testApp()
         }
     }
          stage('deploye') {
             steps {
-                echo 'deploye the the application on server'
-                echo "doploy the version ${params.VERSION}"
+            gv.deployApp()   
         }
     }
   }
