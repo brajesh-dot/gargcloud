@@ -26,7 +26,7 @@ pipeline {
          stage('deploye') {
             steps {
                 echo 'deploye the the application on server'
-                echo "doploy the version ${VERSION}"
+                echo "doploy the version ${params.VERSION}"
         }
     }
   }
