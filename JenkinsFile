@@ -1,0 +1,22 @@
+pipeline {
+    agent {
+        label 'ram'
+    }
+    stages {
+        stage('built') {
+            steps {
+                echo 'my name is brajesh garg'
+        }
+    }
+         stage('test') {
+            steps {
+                echo 'my name is brajesh garg'
+        }
+    }
+         stage('deploye') {
+            steps {
+                echo 'my name is brajesh garg'
+        }
+    }
+  }
+}
