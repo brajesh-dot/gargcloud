@@ -5,18 +5,19 @@ pipeline {
     stages {
         stage('built') {
             steps {
-                echo 'my name is brajesh garg'
+                echo 'build the application'
         }
     }
          stage('test') {
             steps {
-                echo 'my name is brajesh garg'
+                echo 'test the application'
         }
     }
          stage('deploye') {
             steps {
-                echo 'my name is brajesh garg'
+                echo 'deploye the the application'
         }
     }
   }
 }
+
